@@ -19,17 +19,18 @@
 #define lp(i,a,b)   for(ll i=a;i<b;++i)
 #define lpr(i,a,b)  for(ll i=a;i>=b;i--)
 #define ios         ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-ll inf = (ll)1e7;
+ 
 using namespace std;
-
+ 
 int main(){
     ios
-    ll n,m,k,i=3; cin>>n;
-    if(n<3) {cout<<-1; return 0;}
-    while(1){
-            k = sqrt(pow(i,2)+pow(n,2));
-        if(i*i + n*n == k*k)
-            {cout<<i<<" "<<k; return 0;}
-        i++;
+    ll n,a,b; cin>>n;
+    lp(i,0,n){
+        cin >> a >> b;
+        if (a != b) {
+            cout << "Happy Alex";
+            return 0;
+        }
     }
+    cout << "Poor Alex";
 }
